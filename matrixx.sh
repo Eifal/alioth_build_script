@@ -17,6 +17,7 @@ curl https://raw.githubusercontent.com/sounddrill31/docker-images/04449990912b9d
 #build
 source build/envsetup.sh
 lunch lineage_alioth-ap1a-userdebug
+make installclean
 mka bacon VERBOSE=1
 
 #sign build
