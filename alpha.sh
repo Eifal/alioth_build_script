@@ -12,6 +12,8 @@ git clone https://github.com/Eifal/local_manifests --depth 1 .repo/local_manifes
 # Sync the repositories
 curl https://raw.githubusercontent.com/sounddrill31/docker-images/04449990912b9d7ee594193883740037f0ac80a7/aosp/common/resync.sh | bash
 
+curl https://raw.githubusercontent.com/Eifal/alioth_build_script/main/remove.sh | bash
+
 #customs
 
 #build
