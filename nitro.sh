@@ -28,6 +28,7 @@ curl https://raw.githubusercontent.com/sounddrill31/docker-images/04449990912b9d
 # Custom build commands
 source build/envsetup.sh
 breakfast alioth userdebug
+make 
 
 # Sign build (add your signing commands here)
 # sign_build_commands_here
