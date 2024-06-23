@@ -16,6 +16,7 @@ curl https://raw.githubusercontent.com/sounddrill31/docker-images/04449990912b9d
 
 #build
 source build/envsetup.sh
-brunch alioth VERBOSE=1
+lunch crdroid_alioth-ap1a-userdebug
+mka bacon VERBOSE=1
 
 #sign build
