@@ -11,15 +11,11 @@ git clone https://github.com/Eifal/local_manifests --depth 1 .repo/local_manifes
 
 # Remove something
 if [ -d "prebuilts/clang/host/linux-x86" ]; then
-    cd prebuilts/clang/host/linux-x86
-    git reset --hard HEAD
-    cd -
+    rm -rf prebuilts/clang/host/linux-x86
 fi
 
 if [ -d "prebuilts/rust" ]; then
-    cd prebuilts/rust
-    git reset --hard HEAD
-    cd -
+    rm -rf prebuilts/rust
 fi
 
 # Sync the repositories
