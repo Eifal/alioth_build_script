@@ -27,7 +27,7 @@ curl https://raw.githubusercontent.com/sounddrill31/docker-images/04449990912b9d
 
 # Custom build commands
 source build/envsetup.sh
-lunch nitrogen_alioth-ap2a-userdebug
+lunch nitrogen_alioth-userdebug
 make bacon VERBOSE=1
 
 # Sign build (add your signing commands here)
