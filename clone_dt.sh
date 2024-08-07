@@ -11,7 +11,7 @@ rm -rf vendor/xiaomi/camera
 
 # Clone repositories
 echo "Cloning repositories..."
-git clone --depth 1 --branch lineage-21-alpha https://github.com/Eifal/android_device_xiaomi_alioth device/xiaomi/alioth
+git clone --depth 1 --branch lineage-21-everest https://github.com/Eifal/android_device_xiaomi_alioth device/xiaomi/alioth
 git clone --depth 1 --branch lineage-21-alpha https://github.com/Eifal/android_device_xiaomi_sm8250-common device/xiaomi/sm8250-common
 git clone --depth 1 --branch staging https://github.com/EmanuelCN/kernel_xiaomi_sm8250 kernel/xiaomi/sm8250
 git clone --depth 1 --branch lineage-21 https://github.com/TheMuppets/proprietary_vendor_xiaomi_alioth vendor/xiaomi/alioth
