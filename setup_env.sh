@@ -26,20 +26,10 @@ apt-get install -y \
   unzip \
   fontconfig \
   bc \
-  bison \
-  build-essential \
-  curl \
-  flex \
-  g++-multilib \
-  gcc-multilib \
-  git \
-  gnupg \
   gperf \
   imagemagick \
-  lib32ncurses5-dev \
   lib32readline-dev \
   liblz4-tool \
-  libncurses5-dev \
   libsdl1.2-dev \
   libssl-dev \
   lzop \
@@ -47,8 +37,6 @@ apt-get install -y \
   rsync \
   schedtool \
   squashfs-tools \
-  zip \
-  zlib1g-dev \
   openjdk-11-jdk \
   python3 \
   python-is-python3 \
@@ -56,6 +44,16 @@ apt-get install -y \
   libncurses-dev \
   ccache \
   git-lfs
+
+wget http://archive.ubuntu.com/ubuntu/pool/universe/n/ncurses/libtinfo5_6.4-2_amd64.deb
+sudo dpkg -i libtinfo5_6.4-2_amd64.deb
+rm -f libtinfo5_6.4-2_amd64.deb
+
+wget http://archive.ubuntu.com/ubuntu/pool/universe/n/ncurses/libncurses5_6.4-2_amd64.deb
+sudo dpkg -i libncurses5_6.4-2_amd64.deb
+rm -f libncurses5_6.4-2_amd64.deb
+
+sudo apt install lib32ncurses5-dev libncurses5 libncurses5-dev -y
 
 mkdir -p ~/bin
 export PATH=~/bin:$PATH
@@ -67,10 +65,6 @@ git lfs install
 git clone https://github.com/akhilnarang/scripts.git ~/scripts
 bash ~/scripts/setup/android_build_env.sh
 
-echo "All necessary packages have been installed and the build environment is set up."
-echo "Don't forget to add ~/bin to your PATH if it's not already there."
-echo "Example: export PATH=~/bin:\$PATH"
-
 if [ -n "$ZSH_VERSION" ]; then
   echo 'export PATH=~/bin:$PATH' >> ~/.zshrc
   source ~/.zshrc
@@ -78,5 +72,9 @@ else
   echo 'export PATH=~/bin:$PATH' >> ~/.bashrc
   source ~/.bashrc
 fi
+
+echo "All necessary packages have been installed and the build environment is set up."
+echo "Don't forget to add ~/bin to your PATH if it's not already there."
+echo "Example: export PATH=~/bin:\$PATH"
 
 echo "To start building, navigate to your AOSP/LineageOS directory, run 'source build/envsetup.sh', select your lunch target, and then run 'm -j$(nproc --all)'."
