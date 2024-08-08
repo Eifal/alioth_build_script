@@ -1,6 +1,5 @@
 #!/bin/bash
 
-sudo su
 add-apt-repository ppa:openjdk-r/ppa
 apt-get update
 apt-get install -y \
