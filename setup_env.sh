@@ -19,8 +19,11 @@ apt-get install -y \
   gcc-multilib \
   g++-multilib \
   libc6-dev-i386 \
-  libncurses6 \
+  libncurses-dev \
   lib32ncurses-dev \
+  libncurses5 \
+  lib32ncurses5-dev \
+  libtinfo5 \
   x11proto-core-dev \
   libx11-dev \
   lib32z1-dev \
@@ -45,22 +48,8 @@ apt-get install -y \
   python3 \
   python-is-python3 \
   python3-pip \
-  libncurses-dev \
   ccache \
   git-lfs
-
-# Install libtinfo5
-wget http://archive.ubuntu.com/ubuntu/pool/universe/n/ncurses/libtinfo5_6.4-2_amd64.deb
-sudo dpkg -i libtinfo5_6.4-2_amd64.deb
-rm -f libtinfo5_6.4-2_amd64.deb
-
-# Install libncurses5
-wget http://archive.ubuntu.com/ubuntu/pool/universe/n/ncurses/libncurses5_6.4-2_amd64.deb
-sudo dpkg -i libncurses5_6.4-2_amd64.deb
-rm -f libncurses5_6.4-2_amd64.deb
-
-# Install additional ncurses packages
-sudo apt install lib32ncurses5-dev libncurses5 libncurses5-dev -y
 
 # Set up repo tool
 mkdir -p ~/bin
@@ -86,9 +75,6 @@ fi
 
 # Completion messages
 echo "All necessary packages have been installed and the build environment is set up."
-echo "Don't forget to add ~/bin to your PATH if it's not already there."
-echo "Example: export PATH=~/bin:\$PATH"
-echo "To start building, navigate to your AOSP/LineageOS directory, run 'source build/envsetup.sh', select your lunch target, and then run 'm -j$(nproc --all)'."
 
 # Exit the script
 exit 0
