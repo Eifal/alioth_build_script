@@ -1,13 +1,8 @@
 #!/bin/bash
 
-# Add OpenJDK repository
-add-apt-repository ppa:openjdk-r/ppa
-
-# Update package list
-apt-get update
-
-# Install necessary packages
-apt-get install -y \
+# Install necessary packages with sudo
+sudo apt-get update
+sudo apt-get install -y \
   git-core \
   gnupg \
   flex \
@@ -49,7 +44,8 @@ apt-get install -y \
   python-is-python3 \
   python3-pip \
   ccache \
-  git-lfs
+  git-lfs \
+  libarchive-tools
 
 # Set up repo tool
 mkdir -p ~/bin
@@ -73,8 +69,5 @@ else
   source ~/.bashrc
 fi
 
-# Completion messages
+# Completion message
 echo "All necessary packages have been installed and the build environment is set up."
-
-# Exit the script
-exit 0
