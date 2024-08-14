@@ -4,6 +4,12 @@
 wget https://raw.githubusercontent.com/Eifal/alioth_build_script/main/setup_env.sh -O setup_env.sh && chmod +x setup_env.sh && ./setup_env.sh
 ```
 
+## SWAP SETUP
+
+```sh
+wget https://raw.githubusercontent.com/Eifal/alioth_build_script/main/swap.sh -O swap.sh && chmod +x swap.sh && sudo ./setup_env.sh
+```
+
 ## CLONE DT
 
 ```sh
