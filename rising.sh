@@ -1,6 +1,14 @@
 #!/bin/bash
 
 rm -rf .repo/local_manifests
+
+# repo init rom
+repo init -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs
+
+# Sync
+/opt/crave/resync.sh
+
+# Clone DT
 rm -rf device/xiaomi/alioth
 rm -rf device/xiaomi/sm8250-common
 rm -rf vendor/xiaomi/alioth
@@ -19,7 +27,7 @@ git clone --depth 1 -b staging --recurse-submodules "https://github.com/eprjkt/k
 git clone --depth 1 -b 14.0 "https://gitlab.com/crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-r536225.git" prebuilts/clang/host/linux-x86/clang-r536225
 git clone --depth 1 -b lineage-21 "https://github.com/LineageOS/android_hardware_xiaomi.git" hardware/xiaomi
 
-#Build
+# Build
 source build/envsetup.sh
 riseup alioth userdebug
 yes "" | gk -s
