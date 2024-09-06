@@ -28,7 +28,7 @@ git clone --depth 1 -b 14.0 "https://gitlab.com/crdroidandroid/android_prebuilts
 git clone --depth 1 -b lineage-21 "https://github.com/LineageOS/android_hardware_xiaomi.git" hardware/xiaomi
 
 # Build
-source build/envsetup.sh
+. build/envsetup.sh
 riseup alioth userdebug
 yes "" | gk -s
 rise b
