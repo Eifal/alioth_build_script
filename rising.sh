@@ -6,7 +6,7 @@ rm -rf .repo/local_manifests
 repo init -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs
 
 # local manifests
-git clone https://github.com/eprjkt/local_manifests -b main .repo/local_manifests
+git clone https://github.com/Eifal/local_manifests -b rising .repo/local_manifests
 
 # Remove existing directories
 rm -rf device/xiaomi/alioth
