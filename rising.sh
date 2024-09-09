@@ -17,7 +17,7 @@ rm -rf kernel/xiaomi/sm8250
 rm -rf vendor/xiaomi/camera
 
 # clone kernel
-git clone --recurse-submodules -b magictime-new https://github.com/TIMISONG-dev/kernel_xiaomi_sm8250.git kernel/xiaomi/sm8250
+git clone --recurse-submodules -b staging https://github.com/EmanuelCN/kernel_xiaomi_sm8250.git kernel/xiaomi/sm8250
 
 # Sync
 /opt/crave/resync.sh
