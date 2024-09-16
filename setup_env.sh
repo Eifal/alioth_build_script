@@ -45,7 +45,8 @@ sudo apt-get install -y \
   python3-pip \
   ccache \
   git-lfs \
-  libarchive-tools
+  libarchive-tools \
+  device-tree-compiler
 
 # Set up repo tool
 mkdir -p ~/bin
