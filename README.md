@@ -7,7 +7,7 @@ wget https://raw.githubusercontent.com/Eifal/alioth_build_script/main/setup_env.
 ## SWAP SETUP
 
 ```sh
-wget https://raw.githubusercontent.com/Eifal/alioth_build_script/main/swap.sh -O swap.sh && chmod +x swap.sh && sudo ./setup_env.sh
+wget https://raw.githubusercontent.com/Eifal/alioth_build_script/main/swap.sh -O swap.sh && chmod +x swap.sh && sudo ./swap.sh
 ```
 
 ## CLONE DT
